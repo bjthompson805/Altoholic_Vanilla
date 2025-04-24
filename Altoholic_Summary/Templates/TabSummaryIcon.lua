@@ -50,7 +50,8 @@ end
 
 local function ShowOptionsCategory(self)
 	addon:ToggleUI()
-	InterfaceOptionsFrame_OpenToCategory(self.value)
+	--InterfaceOptionsFrame_OpenToCategory(self.value)
+	Settings.OpenToCategory(self.value)
 end
 
 local function ResetAllData_MsgBox_Handler(self, button)

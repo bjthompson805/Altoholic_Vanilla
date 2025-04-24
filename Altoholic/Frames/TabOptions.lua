@@ -255,7 +255,7 @@ function addon:SetupOptions()
 	-- create categories in Blizzard's options panel
 	
 	DataStore:AddOptionCategory(AltoholicGeneralOptions, addonName)
-	LibStub("LibAboutPanel").new(addonName, addonName);
+	--LibStub("LibAboutPanel").new(addonName, addonName);
 	DataStore:AddOptionCategory(AltoholicHelp, HELP_LABEL, addonName)
 	DataStore:AddOptionCategory(AltoholicSupport, "Getting support", addonName)
 	DataStore:AddOptionCategory(AltoholicWhatsNew, "What's new?", addonName)
@@ -531,8 +531,8 @@ local lastOptionsPanelWidth = 0
 local lastOptionsPanelHeight = 0
 
 function addon:OnUpdate(self, mandatoryResize)
-	OptionsPanelWidth = InterfaceOptionsFramePanelContainer:GetWidth()
-	OptionsPanelHeight = InterfaceOptionsFramePanelContainer:GetHeight()
+	OptionsPanelWidth = SettingsPanel.Container.SettingsCanvas:GetWidth()
+	OptionsPanelHeight = SettingsPanel.Container.SettingsCanvas:GetHeight()
 	
 	if not mandatoryResize then -- if resize is not mandatory, allow exit
 		if OptionsPanelWidth == lastOptionsPanelWidth and OptionsPanelHeight == lastOptionsPanelHeight then return end		-- no size change ? exit

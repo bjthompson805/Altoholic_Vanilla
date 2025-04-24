@@ -664,7 +664,9 @@ function addon:UpdateSlider(frame, text, field)
 	local name = frame:GetName()
 	local value = frame:GetValue()
 
-	_G[name .. "Text"]:SetText(format("%s (%d)", text, value))
+	if _G[name .. "Text"] then
+		_G[name .. "Text"]:SetText(format("%s (%d)", text, value))
+	end
 	if addon.db and addon.db.global then 
 		addon:SetOption(field, value)
 		Minimap.AltoholicButton:Move()

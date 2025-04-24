@@ -485,7 +485,7 @@ local function QuestsIcon_Initialize(self, level)
 	DDM_AddTitle("|r ")
 	DDM_AddTitle(GAMEOPTIONS_MENU)
 	if DataStore_Quests then
-		DDM_Add("DataStore Quests", nil, function() Altoholic:ToggleUI(); InterfaceOptionsFrame_OpenToCategory("DataStore_Quests") end)
+		DDM_Add("DataStore Quests", nil, function() Altoholic:ToggleUI(); Settings.OpenToCategory("DataStore_Quests") end)
 	end
 	DDM_AddCloseMenu()
 end
@@ -529,7 +529,7 @@ local function AuctionIcon_Initialize(self, level)
 	DDM_AddTitle("|r ")
 	DDM_AddTitle(GAMEOPTIONS_MENU)
 	if DataStore_Auctions then
-		DDM_Add("DataStore Auctions", nil, function() Altoholic:ToggleUI(); InterfaceOptionsFrame_OpenToCategory("DataStore_Auctions") end)
+		DDM_Add("DataStore Auctions", nil, function() Altoholic:ToggleUI(); Settings.OpenToCategory("DataStore_Auctions") end)
 	end
 	DDM_AddCloseMenu()
 end
@@ -551,9 +551,9 @@ local function MailIcon_Initialize(self, level)
 	DDM_Add(colors.white .. L["Clear all entries"], nil, OnClearMailboxEntries)
 	DDM_AddTitle("|r ")
 	DDM_AddTitle(GAMEOPTIONS_MENU)
-	DDM_Add(MAIL_LABEL, nil, function() Altoholic:ToggleUI(); InterfaceOptionsFrame_OpenToCategory(AltoholicMailOptions) end)
+	DDM_Add(MAIL_LABEL, nil, function() Altoholic:ToggleUI(); Settings.OpenToCategory(AltoholicMailOptions) end)
 	if DataStore_Mails then
-		DDM_Add("DataStore Mails", nil, function() Altoholic:ToggleUI(); InterfaceOptionsFrame_OpenToCategory(DataStoreMailOptions) end)
+		DDM_Add("DataStore Mails", nil, function() Altoholic:ToggleUI(); Settings.OpenToCategory(DataStoreMailOptions) end)
 	end
 	
 	DDM_AddCloseMenu()

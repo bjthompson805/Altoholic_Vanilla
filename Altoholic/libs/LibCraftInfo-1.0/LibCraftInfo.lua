@@ -1,5 +1,5 @@
 --[[	*** LibCraftInfo ***
-Written by : Thaoky, EU-Marécages de Zangar
+Written by : Thaoky, EU-Marï¿½cages de Zangar
 September 21st, 2013
 
 This library contains various information about crafts, namely:
@@ -14,6 +14,7 @@ local LIB_VERSION_MAJOR, LIB_VERSION_MINOR = "LibCraftInfo-1.0", 3
 local lib = LibStub:NewLibrary(LIB_VERSION_MAJOR, LIB_VERSION_MINOR)
 
 if not lib then return end -- No upgrade needed
+local isRetail = WOW_PROJECT_ID == WOW_PROJECT_MAINLINE
 
 --[[ ** Data Format **
 format [spellID] = attribute (number, to be read bit by bit)
@@ -65,7 +66,7 @@ local internalIDToProfession = {
 	[4] = 45357,	-- Inscription
 	[5] = 25229,	-- Jewelcrafting
 	[6] = 2108,		-- Leatherworking
-	[7] = 2656,		-- Mining
+	[7] = isRetail and 2656 or 2575,		-- Mining
 	[8] = 3908,		-- Tailoring
 	[9] = 2550,		-- Cooking
 	[10] = 3273,	-- First Aid

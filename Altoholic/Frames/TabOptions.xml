@@ -69,7 +69,7 @@
 				</Scripts>
 			</CheckButton>
 			
-			<CheckButton parentKey="ShowMinimapIcon" inherits="InterfaceOptionsCheckButtonTemplate">
+			<CheckButton parentKey="ShowMinimapIcon" inherits="UICheckButtonTemplate">
 				<Size x="20" y="20" />
 				<Anchors> 
 					<Anchor point="TOPLEFT" relativeKey="$parent.ClampWindowToScreen" relativePoint="BOTTOMLEFT" x="0" y="-10" />
@@ -86,7 +86,8 @@
 					</OnClick>
 				</Scripts>
 			</CheckButton>
-			<Slider name="$parent_SliderAngle" inherits="OptionsSliderTemplate"  minValue="1" maxValue="360" defaultValue="180" valueStep="1">
+			<!-- <Slider name="$parent_SliderAngle" inherits="OptionsSliderTemplate"  minValue="1" maxValue="360" defaultValue="180" valueStep="1"> -->
+			<Slider name="$parent_SliderAngle" inherits="UISliderTemplateWithLabels"  minValue="1" maxValue="360" defaultValue="180" valueStep="1">
 				<Size x="180" y="16" />
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent.ShowMinimapIcon" relativePoint="BOTTOMLEFT" x="20" y="-30" />
@@ -98,7 +99,8 @@
 					</OnValueChanged>
 				</Scripts>
 			</Slider>
-			<Slider name="$parent_SliderRadius" inherits="OptionsSliderTemplate"  minValue="1" maxValue="200" defaultValue="78" valueStep="1">
+			<!-- <Slider name="$parent_SliderRadius" inherits="OptionsSliderTemplate"  minValue="1" maxValue="200" defaultValue="78" valueStep="1"> -->
+			<Slider name="$parent_SliderRadius" inherits="UISliderTemplateWithLabels"  minValue="1" maxValue="200" defaultValue="78" valueStep="1">
 				<Size x="180" y="16" />
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent.ShowMinimapIcon" relativePoint="BOTTOMLEFT" x="20" y="-80" />
@@ -111,7 +113,8 @@
 				</Scripts>
 			</Slider>
 			
-			<Slider name="$parent_SliderScale" inherits="OptionsSliderTemplate"  minValue="0.5" maxValue="4.0" defaultValue="1.0" valueStep="0.1">
+			<!-- <Slider name="$parent_SliderScale" inherits="OptionsSliderTemplate"  minValue="0.5" maxValue="4.0" defaultValue="1.0" valueStep="0.1"> -->
+			<Slider name="$parent_SliderScale" inherits="UISliderTemplateWithLabels"  minValue="0.5" maxValue="4.0" defaultValue="1.0" valueStep="0.1">
 				<Size x="180" y="16" />
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent.ShowMinimapIcon" relativePoint="BOTTOMLEFT" x="20" y="-130" />
@@ -158,7 +161,8 @@
 					</OnClick>
 				</Scripts>
 			</Button>
-			<Slider name="$parent_SliderAlpha" inherits="OptionsSliderTemplate"  minValue="0.1" maxValue="1" defaultValue="1" valueStep="0.05">
+			<!-- <Slider name="$parent_SliderAlpha" inherits="OptionsSliderTemplate"  minValue="0.1" maxValue="1" defaultValue="1" valueStep="0.05"> -->
+			<Slider name="$parent_SliderAlpha" inherits="UISliderTemplateWithLabels"  minValue="0.1" maxValue="1" defaultValue="1" valueStep="0.05">
 				<Size x="180" y="16" />
 				<Anchors>
 					<Anchor point="TOPLEFT" relativeKey="$parent.ShowMinimapIcon" relativePoint="BOTTOMLEFT" x="20" y="-210" />
@@ -534,7 +538,7 @@
 				<NormalTexture name="$parentIcon" file="Interface\Buttons\UI-MinusButton-UP" />
 				<HighlightTexture file="Interface\Buttons\UI-PlusButton-Hilight" alphaMode="ADD" />
 			</Button>
-			<CheckButton name="$parent_CheckAll" inherits="InterfaceOptionsSmallCheckButtonTemplate">
+			<CheckButton name="$parent_CheckAll" inherits="UICheckButtonTemplate">
 				<Size x="20" y="20" />
 				<Anchors> 
 					<Anchor point="LEFT" relativeTo="$parent_ToggleAll" relativePoint="RIGHT" x="5" y="0" />

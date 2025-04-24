@@ -1,6 +1,6 @@
-## Interface: 11500
-## Title: Altoholic Classic by |cFF69CCF0Thaoky|r
-## Title-zhCN: |cffeedd99 [物品] |r: 全角色统计 Altoholic
+## Interface: 11507
+## Title: Altoholic Classic
+## Title-zhCN: 全角色统计 Altoholic
 
 ## Notes: Provides information about your alts
 ## Notes-ruRU: Предоставляет информацию о вашем персонажах
