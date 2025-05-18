@@ -69,7 +69,7 @@ if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then
 	table.insert(factions, { id = 930, name = BF["Exodar"] })
 end
 
-if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 	table.insert(factions, { id = 54, name = BF["Gnomeregan Exiles"] })
 else
 	table.insert(factions, { id = 54, name = BF["Gnomeregan"] })

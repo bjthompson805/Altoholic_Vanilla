@@ -534,7 +534,7 @@ local function OnBankFrameOpened()
 end
 
 local function OnGuildBankFrameClosed()
-	-- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	-- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		-- addon:UnregisterEvent("GUILDBANKFRAME_CLOSED")
 	-- end
 	addon:UnregisterEvent("GUILDBANKBAGSLOTS_CHANGED")
@@ -552,7 +552,7 @@ end
 
 local function OnGuildBankFrameOpened()
 	
-	-- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	-- if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		-- addon:RegisterEvent("GUILDBANKFRAME_CLOSED", OnGuildBankFrameClosed)
 	-- end
 	
@@ -1209,7 +1209,7 @@ function addon:OnEnable()
 	addon:RegisterEvent("PLAYER_INTERACTION_MANAGER_FRAME_SHOW", OnPlayerInteractionManagerFrameShow)
 	addon:RegisterEvent("PLAYER_INTERACTION_MANAGER_FRAME_HIDE", OnPlayerInteractionManagerFrameHide)
 		
-	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		-- Wrath only .. and exit
 		addon:RegisterEvent("GUILDBANKFRAME_OPENED", OnGuildBankFrameOpened)
 		return
@@ -1234,7 +1234,7 @@ function addon:OnDisable()
 	addon:UnregisterEvent("PLAYER_INTERACTION_MANAGER_FRAME_SHOW")	
 	addon:UnregisterEvent("PLAYER_INTERACTION_MANAGER_FRAME_HIDE")
 	
-	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC or WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		-- Wrath only .. and exit
 		addon:UnregisterEvent("GUILDBANKFRAME_OPENED")
 		return 

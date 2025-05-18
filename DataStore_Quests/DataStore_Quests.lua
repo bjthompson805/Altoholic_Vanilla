@@ -1125,7 +1125,7 @@ hooksecurefunc("GetQuestReward", function(choiceIndex)
 	-- mark the current quest ID as completed
 	history[index] = bOr((history[index] or 0), 2^bitPos)	-- read: value = SetBit(value, bitPosition)
 
-	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE or WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE or WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 
 		-- track daily quests turn-ins
 		if QuestIsDaily() or emissaryQuests[questID] then

@@ -642,7 +642,7 @@ local function ScanRecipes_NonRetail()
 	local char = addon.ThisCharacter
 	local profession = char.Professions[tradeskillName]
 	
-	if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		-- Get profession link
 		local profLink = GetTradeSkillListLink()
 		if profLink then	-- sometimes a nil value may be returned, so keep the old one if nil
@@ -686,7 +686,7 @@ local function ScanRecipes_NonRetail()
 		
 		-- Get recipeID
 		
-		if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+		if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 			recipeLink = GetTradeSkillRecipeLink(i) -- add recipe link here to get recipeID
 			if recipeLink then
 				local found, _, enchantString = string.find(recipeLink, "^|%x+|H(.+)|h%[.+%]")
@@ -702,7 +702,7 @@ local function ScanRecipes_NonRetail()
 		if link then
 			itemID = tonumber(link:match("item:(%d+)"))
 			
-			if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+			if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 				if itemID and recipeID then
 					local maxMade = 1
 					resultItems[recipeID] = maxMade + LShift(itemID, 8) 	-- bits 0-7 = maxMade, bits 8+ = item id
@@ -732,7 +732,7 @@ local function ScanRecipes_NonRetail()
 				end
 
 				-- if there is a valid recipeID, save it
-				if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+				if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 					craftInfo = (recipeLink and recipeID) and recipeID or ""
 				else
 					craftInfo = (link and itemID) and itemID or ""
@@ -994,7 +994,7 @@ local function OnChatMsgSystem(self, message)
 end
 
 local function OnDataSourceChanged(self)
-	if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+	if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 		if IsTradeSkillLinked() then return end
 	
 	else

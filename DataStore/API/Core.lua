@@ -22,7 +22,7 @@ local modulesList = {
 	["DataStore_Talents"] = true
 }
 
-if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
+if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
 	-- Add wrath modules
 	modulesList["DataStore_Currencies"] = true
 
@@ -102,7 +102,7 @@ function addon:RegisterModule(moduleName, module, publicMethods, allowOverrides)
 		local prefix = format("%sDataStore%s: ", teal, white)
 
 		print(format("%sError triggered by : %s%s", prefix, yellow, moduleName))
-		print("You are using an unauthorized DataStore module that breaches the licensing rights of DataStore's sole author (Thaoky, EU-Marécages de Zangar).")
+		print("You are using an unauthorized DataStore module that breaches the licensing rights of DataStore's sole author (Thaoky, EU-Marï¿½cages de Zangar).")
 		print("The development and distribution of unauthorized DataStore modules outside of the official Altoholic package is prohibited by the 'All Rights Reserved' licensing terms.")
 		print("|cFFFFFF00What you should do :")
 		print(format("Leave the game and clear all Altoholic* and DataStore* folders from the %sInterface\\Addons%s folder, and make a manual download of the latest version of Altoholic from one of the two official sources (Curseforge and WoW Interface).", cyan, white))
