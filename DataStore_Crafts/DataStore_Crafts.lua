@@ -732,7 +732,7 @@ local function ScanRecipes_NonRetail()
 				end
 
 				-- if there is a valid recipeID, save it
-				if WOW_PROJECT_ID == WOW_PROJECT_CLASSIC then
+				if WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC then
 					craftInfo = (recipeLink and recipeID) and recipeID or ""
 				else
 					craftInfo = (link and itemID) and itemID or ""
