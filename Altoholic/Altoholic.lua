@@ -156,9 +156,9 @@ function AuctionFrameBrowse_UpdateHook()
 	
 	if addon:GetOption("UI.AHColorCoding") == false then return end
 	
-	if IsAddOnLoaded("Auctioneer") and Auctioneer.ScanManager.IsScanning() then return end
+	if C_AddOns.IsAddOnLoaded("Auctioneer") and Auctioneer.ScanManager.IsScanning() then return end
 
-	if IsAddOnLoaded("Auc-Advanced") then
+	if C_AddOns.IsAddOnLoaded("Auc-Advanced") then
 		if AucAdvanced.Scan.IsScanning() then return end;
 		if AucAdvanced.Settings.GetSetting("util.compactui.activated") then
 			AuctioneerCompactUI = true

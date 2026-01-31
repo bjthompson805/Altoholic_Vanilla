@@ -151,8 +151,8 @@ end
 do
 	-- Handle the initial scan of LoD data modules, storing in this local table so the sets metatable can find em
 	local lodmodules = {}
-	for i = 1, GetNumAddOns() do
-		local metadata = GetAddOnMetadata(i, "X-PeriodicTable-3.1-Module")
+	for i = 1, C_AddOns.GetNumAddOns() do
+		local metadata = C_AddOns.GetAddOnMetadata(i, "X-PeriodicTable-3.1-Module")
 		if metadata then
 			local name, _, _, enabled = GetAddOnInfo(i)
 			if enabled then
@@ -165,7 +165,7 @@ do
 		__index = function(self, key)
 			local base = key:match("^([^%.]+)%.") or key
 			if lodmodules[base] then
-				LoadAddOn(lodmodules[base])
+				C_AddOns.LoadAddOn(lodmodules[base])
 				lodmodules[base] = nil -- don't try to load again
 				-- still may need to generate multiset or something like that, so re-call the metamethod if need be
 				return self[key]

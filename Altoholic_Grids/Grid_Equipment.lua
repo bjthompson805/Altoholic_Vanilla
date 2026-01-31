@@ -458,8 +458,8 @@ local callbacks = {
 			if not link then return end
 			
 			if button == "RightButton" then
-				if not IsAddOnLoaded("Altoholic_Search") then
-					LoadAddOn("Altoholic_Search")
+				if not C_AddOns.IsAddOnLoaded("Altoholic_Search") then
+					C_AddOns.LoadAddOn("Altoholic_Search")
 					addon:DDM_Initialize(AltoholicFrameGridsRightClickMenu, RightClickMenu_Initialize)
 				end
 				

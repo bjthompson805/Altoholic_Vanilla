@@ -192,10 +192,10 @@ local ContainerTypes = {
 
 				-- 20250103: Bug fix for Blizzard reporting classic bank has 28 free slots even when it says the bank size is only 24 slots
 				-- Makes an assumption that the last "free" slot is the total and the difference from max bank size to max free is inaccessible
-				local containerFreeSlots = C_Container.GetContainerFreeSlots(-1)
-				if containerFreeSlots[#containerFreeSlots] > C_Container.GetContainerNumSlots(-1) then
-					freeSlots = C_Container.GetContainerNumFreeSlots(-1) - (containerFreeSlots[#containerFreeSlots] - C_Container.GetContainerNumSlots(-1))
-				end
+				--local containerFreeSlots = C_Container.GetContainerFreeSlots(-1)
+				--if containerFreeSlots[#containerFreeSlots] > C_Container.GetContainerNumSlots(-1) then
+				--	freeSlots = C_Container.GetContainerNumFreeSlots(-1) - (containerFreeSlots--[#containerFreeSlots] - C_Container.GetContainerNumSlots(-1))
+				--end
 
 				return freeSlots, bagType
 			end,
@@ -662,14 +662,14 @@ else
 	BagTypeStrings = {
 		[1] = "Quiver",
 		[2] = "Ammo Pouch",
-		[4] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 1), -- "Soul Bag",
-		[8] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 7), -- "Leatherworking Bag",
-		[16] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 8), -- "Inscription Bag",
-		[32] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 2), -- "Herb Bag"
-		[64] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 3), -- "Enchanting Bag",
-		[128] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 4), -- "Engineering Bag",
-		[512] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 5), -- "Gem Bag",
-		[1024] = GetItemSubClassInfo(LE_ITEM_CLASS_CONTAINER, 6), -- "Mining Bag",
+		[4] = GetItemSubClassInfo(Enum.ItemClass.Container, 1), -- "Soul Bag",
+		[8] = GetItemSubClassInfo(Enum.ItemClass.Container, 7), -- "Leatherworking Bag",
+		[16] = GetItemSubClassInfo(Enum.ItemClass.Container, 8), -- "Inscription Bag",
+		[32] = GetItemSubClassInfo(Enum.ItemClass.Container, 2), -- "Herb Bag"
+		[64] = GetItemSubClassInfo(Enum.ItemClass.Container, 3), -- "Enchanting Bag",
+		[128] = GetItemSubClassInfo(Enum.ItemClass.Container, 4), -- "Engineering Bag",
+		[512] = GetItemSubClassInfo(Enum.ItemClass.Container, 5), -- "Gem Bag",
+		[1024] = GetItemSubClassInfo(Enum.ItemClass.Container, 6), -- "Mining Bag",
 	}
 end
 

@@ -366,8 +366,8 @@ for index, name in ipairs(tabList) do
 end
 
 local function SafeLoadAddOn(name)
-	if not IsAddOnLoaded(name) then
-		LoadAddOn(name)
+	if not C_AddOns.IsAddOnLoaded(name) then
+		C_AddOns.LoadAddOn(name)
 	end
 end
 

@@ -21,10 +21,10 @@ end
 local function AddMonths(months)
 	months = months or 0
 	
-	local DateInfo = C_DateAndTime.GetTodaysDate()
+	local DateInfo = C_DateAndTime.GetCurrentCalendarTime()
 	local year = DateInfo.year
 	local month = DateInfo.month
-	local day = DateInfo.day
+	local day = DateInfo.monthDay
 	
 	local i = month - 1 + months
 	

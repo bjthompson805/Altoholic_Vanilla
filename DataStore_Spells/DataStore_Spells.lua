@@ -245,7 +245,11 @@ end
 
 function addon:OnEnable()
 	addon:RegisterEvent("PLAYER_ALIVE", OnPlayerAlive)
-	addon:RegisterEvent("LEARNED_SPELL_IN_TAB", OnLearnedSpellInTab)
+
+	local success = pcall(addon.RegisterEvent, addon, "LEARNED_SPELL_IN_SKILL_LINE", OnLearnedSpellInTab)
+	if not success then
+		addon:RegisterEvent("LEARNED_SPELL_IN_TAB", OnLearnedSpellInTab)
+	end
 	
 	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 		addon:RegisterEvent("MOUNT_JOURNAL_USABILITY_CHANGED", OnMountJournalUsabilityChanged)
@@ -254,7 +258,11 @@ end
 
 function addon:OnDisable()
 	addon:UnregisterEvent("PLAYER_ALIVE")
-	addon:UnregisterEvent("LEARNED_SPELL_IN_TAB")
+	
+	local success = pcall(addon.UnregisterEvent, addon, "LEARNED_SPELL_IN_SKILL_LINE")
+	if not success then
+		addon:UnregisterEvent("LEARNED_SPELL_IN_TAB")
+	end
 	
 	if WOW_PROJECT_ID == WOW_PROJECT_MAINLINE then
 		addon:UnregisterEvent("MOUNT_JOURNAL_USABILITY_CHANGED")
